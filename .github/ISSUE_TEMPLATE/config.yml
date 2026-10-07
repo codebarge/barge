@@ -1,0 +1,16 @@
+# This GitHub repository is a read-only mirror. Issues and merge requests
+# live on GitLab: these links open the right form there.
+blank_issues_enabled: false
+contact_links:
+  - name: Pilot request — Barge for teams
+    url: https://gitlab.com/codebarge/barge/-/issues/new?issuable_template=Pilot%20request
+    about: Try Barge for teams with your company. The request is confidential.
+  - name: Bug report
+    url: https://gitlab.com/codebarge/barge/-/issues/new?issuable_template=Bug%20report
+    about: Something in the CLI does not work as documented.
+  - name: Feature request
+    url: https://gitlab.com/codebarge/barge/-/issues/new?issuable_template=Feature%20request
+    about: An idea for the CLI.
+  - name: Question
+    url: https://gitlab.com/codebarge/barge/-/issues/new?issuable_template=Question
+    about: How do I…? What does this output mean?
