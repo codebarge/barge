@@ -27,23 +27,28 @@ flags of one, and `barge version` shows the version and build details
 (`--short` for scripts, `--json` for tools). Colours turn off in pipes and with
 `NO_COLOR`; `CLICOLOR_FORCE=1` keeps them, for example in CI logs.
 
-The output looks like this (names and numbers are illustrative):
+<p align="center"><img src="docs/images/version.png" alt="barge version" width="520"></p>
 
-```
-Barge dispatcher · main @ 72dd0fb · 2,619 commits · 12 people, 5 active · as of 2026-10-03
+Here is a scan of a demo repository (the team is fictional):
 
-RISK      BUS    AI  MODULE                                  WHO KNOWS IT
-critical    0     –  internal/core/logger                    Dmitry Lysenko 92% (inactive)
-high        1     –  internal/features/payments/service      Oleg Koval 86%, Anna Melnyk 9%
-high        1   62%  internal/core/transport/http/middleware Max Bondarenko 71%
-...
-```
+<p align="center"><img src="docs/images/scan.png" alt="barge scan: modules from the riskiest, who knows each one, and what to do next" width="820"></p>
 
 Every scan ends with **What to do next**: concrete steps such as *make Anna a
 required reviewer of `payments/service` for a month*, or *run a handover for
 the person who is the only one to know 21 modules*. Successors are people who
 already worked on the code or next to it, and people who are already the
 bottleneck are not suggested.
+
+### What if someone leaves?
+
+```sh
+barge scan --leaving oleg@example.com
+```
+
+Marks someone as leaving and shows what becomes critical without them, before
+it happens:
+
+<p align="center"><img src="docs/images/leaving.png" alt="barge scan --leaving: the modules that would have nobody who knows them" width="820"></p>
 
 ### Handover checklist
 
@@ -56,6 +61,8 @@ of, what its bus factor becomes when they leave, a suggested successor, the
 files they wrote, and questions about their largest commits and the reverts
 in their code. Go through it together before someone leaves, or better, long
 before anyone does.
+
+<p align="center"><img src="docs/images/handover.png" alt="A handover checklist: modules, successors, files and questions" width="640"></p>
 
 Useful flags:
 
