@@ -4,7 +4,7 @@ All notable changes to the Barge CLI. Versions follow
 [semantic versioning](https://semver.org/): the second number grows with new
 features, the third with fixes.
 
-## v0.3.0 — Unreleased
+## v0.3.0 — 2026-10-08
 
 The first public release.
 
